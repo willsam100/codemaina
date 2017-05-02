@@ -1,0 +1,525 @@
+﻿<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Presentation</title>
+    <meta name="description" content="">
+    <meta name="author" content="unkown">
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <script src="//code.jquery.com/jquery-1.8.0.js"></script>
+    <script src="//code.jquery.com/ui/1.8.23/jquery-ui.js"></script>
+    <script src="//netdna.bootstrapcdn.com/twitter-bootstrap/2.2.1/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="//cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <link href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.2.1/css/bootstrap-combined.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/reveal.css">
+    <link rel="stylesheet" href="css/theme/night.css" id="theme">
+    <link type="text/css" rel="stylesheet" href="fsharp.formatting/styles/style.css" />
+    <link type="text/css" rel="stylesheet" href="fsharp.formatting/styles/deedle.css" />
+    <link type="text/css" rel="stylesheet" href="css/custom.css" />
+    <script src="fsharp.formatting/styles/tips.js" type="text/javascript"></script>
+    <!-- For syntax highlighting -->
+    <link rel="stylesheet" href="lib/css/zenburn.css">
+    <link rel="stylesheet" href="css/fsreveal.css">
+    <!-- If the query includes 'print-pdf', include the PDF print sheet -->
+    <script>
+			if( window.location.search.match( /print-pdf/gi ) ) {
+				var link = document.createElement( 'link' );
+				link.rel = 'stylesheet';
+				link.type = 'text/css';
+				link.href = 'css/print/pdf.css';
+				document.getElementsByTagName( 'head' )[0].appendChild( link );
+			}
+    </script>
+    <!--[if lt IE 9]>
+    <script src="lib/js/html5shiv.js"></script>
+    <![endif]-->
+    <script language="javascript" type="text/javascript">
+        function init()
+        {
+            websocket = new WebSocket("ws://"+window.location.host+"/websocket");
+            websocket.onmessage = function(evt) { location.reload(); };
+        }
+        window.addEventListener("load", init, false);
+    </script>
+</head>
+<body>
+    <div class="reveal">
+        
+        <!-- Any section element inside of this container is displayed as a slide -->
+        <div class="slides">
+            <section >
+<p>Codemaina</p>
+</section>
+<section >
+<h3>More Buisiness code, les boiler plate</h3>
+<ul>
+<li>Code generation</li>
+<li>saves time</li>
+<li>legibility</li>
+<li>generatiity</li>
+</ul>
+</section>
+<section >
+<h3>The tool</h3>
+<ul>
+<li>atomist</li>
+<li>has a slack bot</li>
+<li>command line - fork from GitHub</li>
+<li>language independant</li>
+<li>Java was used in examples</li>
+<li>write code gen in TypeScript</li>
+</ul>
+</section>
+<section >
+<h3>The tool</h3>
+<ul>
+<li>Can intregrate with GitHub</li>
+<li>can merge/submit PRs</li>
+<li>Build tools</li>
+</ul>
+</section>
+<section >
+<h3>Code gen:</h3>
+<ul>
+<li>does not have to be perfect</li>
+<li>compiler/unit tests will catch errors</li>
+<li>Ast - antler agreement</li>
+<li>Antler grammar*</li>
+<li>Also can use a parser</li>
+<li>Micro grammars</li>
+<li>regex/find replace most common</li>
+</ul>
+</section>
+<section >
+<h3>Code gen means</h3>
+<ul>
+<li>
+The output is still familiar
+<ul>
+<li>juniors will be able to read/modify it</li>
+<li>bad abstractions are not created</li>
+</ul>
+</li>
+<li>
+effeciency is improved
+<ul>
+<li>boilplate code cad be removed</li>
+</ul>
+</li>
+<li>
+learnings are caputred
+<ul>
+<li>maintain the script</li>
+<li>update before the next script</li>
+</ul>
+</li>
+<li>
+standards can be introducted
+<ul>
+<li>share the code gen tool</li>
+<li>update the tool with the new standard</li>
+</ul>
+</li>
+</ul>
+</section>
+<section >
+<section >
+<h3>Dave Thomas</h3>
+<h4>Accelerating software delivery</h4>
+<ul>
+<li>use structured data</li>
+<li>immutablity for data</li>
+<li>utlize hardware: it's cheap</li>
+</ul>
+</section>
+<section >
+<h3>Accelerating software delivery</h3>
+<ul>
+<li>Table driven programming</li>
+<li>drive code from tables</li>
+<li>toggle switches in DB</li>
+<li>similar to feature switches but for whole application</li>
+<li>
+extend:
+<ul>
+<li>Desciion tables</li>
+<li>state tables/ state charts</li>
+</ul>
+</li>
+</ul>
+</section>
+<section >
+<h3>Accelerating software delivery</h3>
+<ul>
+<li>keep stuff simple</li>
+<li>spreadsheets are understood by many</li>
+<li>spreadsheet parser</li>
+</ul>
+</section>
+<section >
+<h3>Accelerating software delivery</h3>
+<h4>Testing</h4>
+<ul>
+<li>It's still expensive</li>
+<li>test early</li>
+<li>Property-based testing</li>
+<li>compare two implementations</li>
+</ul>
+</section>
+</section>
+<section >
+<section >
+<h3>Delivering Value</h3>
+<ul>
+<li>NZ companies are using slack bots</li>
+<li>NZ companies are caputuring metrics of the code. Checked/enforced at the PR level</li>
+<li>You are not your code - don't be rude.</li>
+</ul>
+</section>
+<section >
+<h3>Delivering Value</h3>
+<ul>
+<li>Dev: how will i build this</li>
+<li>QA: how will i break this</li>
+<li>Delta: the difference between prod and tip of master</li>
+</ul>
+</section>
+<section >
+<h3>Delivering Value</h3>
+<h4>Features</h4>
+<ul>
+<li>use features switches</li>
+<li>keep it simple: if else statement</li>
+<li>
+clean up the code later
+<ul>
+<li>use a bot for source code analysis</li>
+</ul>
+</li>
+<li>
+repeating code (copy/paste) is not bad
+<ul>
+<li>DRY applies to code with the same dependencies</li>
+<li>features switches are changing dependencies</li>
+</ul>
+</li>
+<li>
+url to turn features on in dev/test
+<ul>
+<li>don't do this in prod</li>
+</ul>
+</li>
+</ul>
+</section>
+<section >
+<h3>Delivering Value</h3>
+<h4>Culture is important</h4>
+<ul>
+<li>fear of breaking things will paralizye your org</li>
+<li>not trying to be irreesponible</li>
+<li>
+incident/morgue report
+<ul>
+<li>done via wiki (not a meeting where the loudest person wins)</li>
+<li>performed by the person closest to the incident</li>
+<li>
+contains:
+<ul>
+<li>scenario/impact</li>
+<li>timeline</li>
+<li>discussion</li>
+<li>mitigations</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</section>
+</section>
+<section >
+<h3>Distruted Databases</h3>
+<ul>
+<li>They are all broken</li>
+<li>consistency algorithems are hard</li>
+<li>property-based testing</li>
+</ul>
+</section>
+<section >
+<h3>Property-Based Testing</h3>
+<ul>
+<li>it's hard</li>
+<li>helps to learn the domain</li>
+<li>works at the outside level (intergration tests)</li>
+<li>hard to to create generatores</li>
+<li>excellent for finding edge cases in the systems</li>
+<li>excellent for algroithms/complicated code</li>
+<li>excellent for understanding the domain</li>
+<li>
+generators are great for mocking data
+<ul>
+<li>Just give me a .... (eg valid email)</li>
+</ul>
+</li>
+</ul>
+</section>
+<section >
+<section >
+<h3>Property-Based Testing</h3>
+<h4>Sucess story</h4>
+<ul>
+<li>Yahoo</li>
+<li>testing email</li>
+<li>what is a valid email</li>
+<li>an email address can contain comments (in the local part)</li>
+<li>and email address can contain nested comments</li>
+</ul>
+</section>
+<section >
+<h3>Testing</h3>
+<ul>
+<li>
+test pyramid is not very useful
+<ul>
+<li>unit tests reduce changed</li>
+<li>outside/integration tests are more valable</li>
+<li>optimise outside tests: better value return</li>
+</ul>
+</li>
+<li>
+use unit tests to create a good archetecure
+<ul>
+<li>add in outsitde tests</li>
+<li>then delete unit tests</li>
+</ul>
+</li>
+</ul>
+</section>
+</section>
+<section >
+<h3>SOLID: its rubbish</h3>
+<ul>
+<li>
+useful when a jnr
+<ul>
+<li>require some guidance</li>
+</ul>
+</li>
+<li>
+programming is hard
+<ul>
+<li>can't be dsitillied into 5 steps</li>
+</ul>
+</li>
+<li>doesn't help to write the next line of code</li>
+<li>focus on the customer</li>
+<li>
+add abstractions/patterns in after
+<ul>
+<li>you have something working</li>
+<li>you understand the domain</li>
+<li>it's the right abstraction</li>
+</ul>
+</li>
+<li>
+simple code
+<ul>
+<li>is easy to change</li>
+<li>is understood by all</li>
+<li>is easy to delete</li>
+</ul>
+</li>
+</ul>
+</section>
+<section >
+<h3>APIs/APKs</h3>
+<ul>
+<li>Use SDK to make web APIs easier to use.</li>
+<li>Authenticated api for free - can tell a user that all is being turned off.</li>
+<li>Pass through meta data in headers. Allows to figure out what your users are using.</li>
+</ul>
+</section>
+<section >
+<h3>.NET Libraries</h3>
+<ul>
+<li>
+SpecLite
+<ul>
+<li>BDD</li>
+<li>
+uses fluent api
+<a href="https://github.com/robfe/SpecLight">https://github.com/robfe/SpecLight</a>
+</li>
+</ul>
+</li>
+<li>
+PowerAssert
+<ul>
+<li>assertion library</li>
+<li>
+shows evaluation of failure
+<a href="https://github.com/PowerAssert/PowerAssert.Net">https://github.com/PowerAssert/PowerAssert.Net</a>
+</li>
+</ul>
+</li>
+</ul>
+</section>
+<section >
+<h3>Data tools</h3>
+<ul>
+<li>Aws: red shift</li>
+<li>Re-dash</li>
+<li>For data</li>
+<li>Data warehouse</li>
+<li>Useful for sharing sql queries</li>
+</ul>
+</section>
+<section >
+<h3>Mobile tools</h3>
+<ul>
+<li>
+Appsee mobile tool
+<ul>
+<li>analytics tool</li>
+<li>can caputre screen</li>
+<li>
+heat maps of user interactions
+<a href="https://www.appsee.com/">https://www.appsee.com/</a>
+</li>
+</ul>
+</li>
+</ul>
+</section>
+<section >
+<h3>Building Culture</h3>
+<h4>For Managers</h4>
+<ul>
+<li>Building control - review of your manager</li>
+<li>360 review</li>
+<li>Teams results aggregated up</li>
+<li>1 - 5 how slammed are you, useful to monitor trend of individual</li>
+<li>One on one's, Coupled with online survey.</li>
+<li>101 one on one questions; use when stricking silence</li>
+<li>'Good authority' Book to read</li>
+<li>Work and life are connected</li>
+<li>Shared project - Build with team members</li>
+</ul>
+</section>
+<section >
+<h3>Tools</h3>
+<ul>
+<li>Metrics - kean.io</li>
+<li>Handles offline data</li>
+<li>Todoist</li>
+<li>Task based app</li>
+<li>Slack bot channels for breaking build.</li>
+<li>Slack bot learn today.</li>
+<li>TIL (Today i learnt a thing)</li>
+<li>Slack bot emoji to post in other channels</li>
+<li>Mattermost - self hosting messaging client</li>
+<li>Slit.io - feature switches</li>
+</ul>
+</section>
+<section >
+<section >
+<h3>Personal: Reflect and Refactor</h3>
+<h4>Reflect</h4>
+<ul>
+<li>'Drive' - book about discovering what motivates you.</li>
+<li>Have 'self retros'</li>
+<li>
+Focus on different timelines
+<ul>
+<li>Daily/weekly</li>
+<li>Monthly</li>
+<li>Yearly</li>
+</ul>
+</li>
+</ul>
+</section>
+<section >
+<h3>Personal: Reflect and Refactor</h3>
+<h4>Refactor</h4>
+<ul>
+<li>Tune and improve habit loops</li>
+<li>creating new habit loops is hard</li>
+<li>easier to add to exisitng habit loop</li>
+<li>must find the right habit loop to 'hack'</li>
+<li>must find the right part of the habit loop to 'hack'</li>
+</ul>
+</section>
+<section >
+<h3>Personal: Reflect and Refactor</h3>
+<h4>Example with character</h4>
+<ul>
+<li>hightlight important character attributes</li>
+<li>assign a numeric value</li>
+<li>graph</li>
+<li>assign actions with points that will earn</li>
+<li>work on levelling up</li>
+</ul>
+</section>
+</section>
+<section >
+<h3>Career</h3>
+<ul>
+<li>Jn/snr -&gt; solution/problem/finder</li>
+<li>Search for what makes you happy</li>
+<li>Experience means better people/communication skills</li>
+<li>Senior expensive but pair with cheaper junior</li>
+<li>Should develop the ability to teach/influence</li>
+<li>The real 10x developer 2x all the other developers</li>
+<li>Teaching big part.</li>
+</ul>
+</section>
+<section >
+<section >
+<h3>Thanks to EROAD</h3>
+</section>
+<section >
+<p>Playing sims- put them in a swimming pool with no laders<br />
+Arbitrary union - type language feature<br />
+Comes from closujre
+Alexa vs Google home battle</p>
+</section>
+</section>
+
+
+        </div>
+    </div>
+    <script src="lib/js/head.min.js"></script>
+    <script src="js/reveal.js"></script>
+    <script>
+        // Add the nohighlight class and data-noescape attribute to code elements that have already been formatted by FSharp.Formatting
+        $('pre.highlighted code').addClass('nohighlight').attr('data-noescape', '');
+
+        // Full list of configuration options available here:
+        // https://github.com/hakimel/reveal.js#configuration
+        Reveal.initialize({
+            controls: true,
+            progress: true,
+            history: true,
+            center: true,
+
+            transition: 'default', // default/cube/page/concave/zoom/linear/fade/none
+
+            // Parallax scrolling
+            // parallaxBackgroundImage: 'https://s3.amazonaws.com/hakim-static/reveal-js/reveal-parallax-1.jpg',
+            // parallaxBackgroundSize: '2100px 900px',
+
+            // Optional libraries used to extend on reveal.js
+            dependencies: [
+                { src: 'lib/js/classList.js', condition: function () { return !document.body.classList; } },
+                { src: 'plugin/markdown/marked.js', condition: function () { return !!document.querySelector('[data-markdown]'); } },
+                { src: 'plugin/markdown/markdown.js', condition: function () { return !!document.querySelector('[data-markdown]'); } },
+                { src: 'plugin/highlight/highlight.js', async: true, callback: function () { hljs.initHighlightingOnLoad(); } },
+                { src: 'plugin/zoom-js/zoom.js', async: true, condition: function () { return !!document.body.classList; } },
+                { src: 'plugin/notes/notes.js', async: true, condition: function () { return !!document.body.classList; } }
+            ]
+        });
+
+    </script>
+</body>
+</html>
+
